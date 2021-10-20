@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         Btn1 = (Button)findViewById(R.id.Btn1);
         EditT1 = (EditText)findViewById(R.id.EditT1);
-        TextV1 = (TextView)findViewById(R.id.EditT1);
+        TextV1 = (TextView)findViewById(R.id.TextV1);
 
         Btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
                 Log.i("detect",result);
                 // 얻어온 값을 토스트로 찍어보세요.
                 Toast.makeText(MainActivity.this, result, Toast.LENGTH_SHORT).show();
+
+                TextV1.setText(result);
             }
         });
     }

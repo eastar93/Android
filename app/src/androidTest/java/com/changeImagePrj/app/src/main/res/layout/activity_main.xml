@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- 텍스트뷰, text="어플 보이기" id값부여 -->
+
+    <!-- 체크박스, text="체크시 보임" id값부여 -->
+
+    <!-- 텍스트뷰, text="보고싶은 동물"
+            android:visibility="invisible" -->
+
+    <!--라디오그룹, android:visibility="invisible" -->
+    <!-- 그룹 내부에 라디오버튼, id값부여 -->
+
+    <!-- 버튼, text="선택 완료", invisible id부여 -->
+
+    <!-- 이미지뷰, 사진가진 동물들 개수만큼 생성 id값부여, invisible -->
+
+    <CheckBox
+        android:id="@+id/IfCheckV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:text="체크시 보임"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AppearApp" />
+
+    <TextView
+        android:id="@+id/ViewAnimal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="20dp"
+        android:text="보고싶은 동물"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IfCheckV" />
+
+    <TextView
+        android:id="@+id/AppearApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="39dp"
+        android:text="어플 보이기"
+        app:layout_constraintBottom_toTopOf="@+id/IfCheckV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/Animals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/IfCheckV"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/catBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="고양이"
+            android:visibility="invisible" />
+
+        <RadioButton
+            android:id="@+id/dogBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="강아지"
+            android:visibility="invisible" />
+
+        <RadioButton
+            android:id="@+id/desertfoxBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="사막여우"
+            android:visibility="invisible" />
+
+        <RadioButton
+            android:id="@+id/squirrelBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="다람쥐"
+            android:visibility="invisible" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/SelComBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginRight="29dp"
+        android:layout_marginBottom="40dp"
+        android:text="선택 완료"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/catImg"
+        app:layout_constraintEnd_toStartOf="@+id/Animals"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ViewAnimal" />
+
+    <ImageView
+        android:id="@+id/catImg"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="264dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:src="@drawable/cat"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/dogImg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/dogImg"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:src="@drawable/dog"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/desertfoxImg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/catImg" />
+
+    <ImageView
+        android:id="@+id/desertfoxImg"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:src="@drawable/desertfox"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dogImg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/squirrelImg"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/squirrel"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/dogImg"
+        app:layout_constraintTop_toBottomOf="@+id/desertfoxImg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
