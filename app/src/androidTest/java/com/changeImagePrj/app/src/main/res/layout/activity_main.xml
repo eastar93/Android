@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="21dp"
         android:text="보고싶은 동물"
         android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,9 +50,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="32dp"
-        android:layout_marginBottom="39dp"
         android:text="어플 보이기"
-        app:layout_constraintBottom_toTopOf="@+id/IfCheckV"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -63,9 +61,9 @@
 
         android:layout_marginStart="22dp"
         android:layout_marginLeft="22dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintStart_toEndOf="@+id/IfCheckV"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/desertfoxImg"
+        app:layout_constraintStart_toEndOf="@+id/IfCheckV">
 
         <RadioButton
             android:id="@+id/catBtn"
@@ -101,66 +99,67 @@
         android:id="@+id/SelComBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="29dp"
-        android:layout_marginRight="29dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginBottom="10dp"
         android:text="선택 완료"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/catImg"
-        app:layout_constraintEnd_toStartOf="@+id/Animals"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ViewAnimal" />
+        app:layout_constraintStart_toStartOf="@+id/catImg" />
 
     <ImageView
         android:id="@+id/catImg"
         android:layout_width="0dp"
         android:layout_height="200dp"
-        android:layout_marginStart="3dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginTop="264dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="240dp"
         android:src="@drawable/cat"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="@+id/dogImg"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/dogImg"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginLeft="7dp"
-        android:src="@drawable/dog"
         android:visibility="invisible"
         app:layout_constraintEnd_toStartOf="@+id/desertfoxImg"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/catImg" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/desertfoxImg"
         android:layout_width="0dp"
         android:layout_height="200dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
         android:src="@drawable/desertfox"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/dogImg"
+        app:layout_constraintStart_toEndOf="@+id/catImg"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/squirrelImg"
-        android:layout_width="200dp"
+        android:layout_width="0dp"
         android:layout_height="200dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="44dp"
         android:src="@drawable/squirrel"
         android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/dogImg"
-        app:layout_constraintTop_toBottomOf="@+id/desertfoxImg" />
+        app:layout_constraintTop_toBottomOf="@+id/desertfoxImg"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/dogImg"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:src="@drawable/dog"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/squirrelImg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/catImg"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
