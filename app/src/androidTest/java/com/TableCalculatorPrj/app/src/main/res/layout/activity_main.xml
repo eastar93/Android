@@ -76,37 +76,41 @@
     </TableRow>
 
     <TableRow>
-
         <Button
             android:id="@+id/SumBtn"
             android:layout_width="match_parent"
-            android:layout_span="5"
+            android:layout_weight="5"
             android:backgroundTint="#3F51B5"
             android:text="+" />
-    </TableRow>
-    <TableRow>
         <Button
-            android:layout_width="match_parent"
-            android:layout_span="5"
-            android:backgroundTint="#3F51B5"
             android:id="@+id/SubBtn"
+            android:layout_width="match_parent"
+            android:layout_weight="5"
+            android:backgroundTint="#3F51B5"
             android:text="-"/>
     </TableRow>
+
     <TableRow>
         <Button
-            android:layout_width="match_parent"
-            android:layout_span="5"
-            android:backgroundTint="#3F51B5"
             android:id="@+id/MulBtn"
+            android:layout_width="match_parent"
+            android:layout_weight="5"
+            android:backgroundTint="#3F51B5"
             android:text="*"/>
+        <Button
+            android:id="@+id/DivBtn"
+            android:layout_width="match_parent"
+            android:layout_weight="5"
+            android:backgroundTint="#3F51B5"
+            android:text="/"/>
     </TableRow>
     <TableRow>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_span="5"
-            android:backgroundTint="#3F51B5"
-            android:id="@+id/DivBtn"
-            android:text="/"/>
+            <Button
+                android:id="@+id/ClearBtn"
+                android:layout_width="match_parent"
+                android:layout_span="5"
+                android:backgroundTint="#3F51B5"
+                android:text="C"/>
     </TableRow>
     <TableRow>
         <TextView

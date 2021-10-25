@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     EditText enum1, enum2;
     Button[] numBtns = new Button[10];
     Integer[] numBtnIDs = {R.id.Num0, R.id.Num1, R.id.Num2, R.id.Num3, R.id.Num4, R.id.Num5, R.id.Num6, R.id.Num7, R.id.Num8, R.id.Num9};
-    Button SumBtn, SubBtn, MulBtn, DivBtn;
+    Button SumBtn, SubBtn, MulBtn, DivBtn, ClearBtn;
     TextView ResultV;
 
     @Override
@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         SubBtn = (Button) findViewById(R.id.SubBtn);
         MulBtn = (Button) findViewById(R.id.MulBtn);
         DivBtn = (Button) findViewById(R.id.DivBtn);
+        ClearBtn = (Button) findViewById(R.id.ClearBtn);
         ResultV = (TextView) findViewById(R.id.Result);
 
         // 부품 배열에 대해서는 이벤트까지 반복문으로 겁니다.
@@ -44,11 +45,21 @@ public class MainActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     // 포커스된 EditText에 숫자 입력하기
                     if(enum1.isFocused()) {
-                        // enum1에 커서가 깜빡이는(즉 선택된)경우
-                        enum1.setText(numBtns[index].getText().toString());
+                        // 0을 첫글자로 입력하는것을 방지하는 로직 추가 예정
+                        if((enum1.getText() + "").equals("0")) {
+                            enum1.setText(numBtns[index].getText());
+                        } else  {
+                            // enum1에 커서가 깜빡이는(즉 선택된)경우
+                            enum1.setText(enum1.getText() + "" + numBtns[index].getText());
+                        }
                     } else if(enum2.isFocused()) {
-                        // enum2에 커서가 깜빡이는(즉 선택된)경우
-                        enum2.setText(numBtns[index].getText().toString());
+                        // 0을 첫글자로 입력하는것을 방지하는 로직 추가 예정
+                        if((enum2.getText() + "").equals("0")) {
+                            enum2.setText(numBtns[index].getText());
+                        } else {
+                            // enum2에 커서가 깜빡이는(즉 선택된)경우
+                            enum2.setText(enum2.getText() + "" + numBtns[index].getText());
+                        }
                     }
                 }
             });
@@ -56,7 +67,49 @@ public class MainActivity extends AppCompatActivity {
             SumBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    int Num1 = Integer.parseInt(enum1.getText() + "");
+                    int Num2 = Integer.parseInt(enum2.getText() + "");
+                    int resultNum = Num1 + Num2;
+                    ResultV.setText(resultNum + "");
+                }
+            });
 
+            SubBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int Num1 = Integer.parseInt(enum1.getText() + "");
+                    int Num2 = Integer.parseInt(enum2.getText() + "");
+                    int resultNum = Num1 - Num2;
+                    ResultV.setText(resultNum + "");
+                }
+            });
+
+            MulBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int Num1 = Integer.parseInt(enum1.getText() + "");
+                    int Num2 = Integer.parseInt(enum2.getText() + "");
+                    int resultNum = Num1 * Num2;
+                    ResultV.setText(resultNum + "");
+                }
+            });
+
+            DivBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int Num1 = Integer.parseInt(enum1.getText() + "");
+                    int Num2 = Integer.parseInt(enum2.getText() + "");
+                    int resultNum = Num1 / Num2;
+                    ResultV.setText(resultNum + "");
+                }
+            });
+
+            ClearBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    enum1.setText("");
+                    enum2.setText("");
+                    ResultV.setText("");
                 }
             });
         }
