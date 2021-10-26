@@ -10,6 +10,8 @@ import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import java.util.Date;
+
 public class MainActivity extends AppCompatActivity {
 
     DatePicker dPicker;
@@ -41,15 +43,13 @@ public class MainActivity extends AppCompatActivity {
 
         // 날짜 처리는 DataPicker에 날짜가 변할때마다 변수에 담는것으로 처리합니다.
         // 창이 열리자마자 가져오게 할때는 dPicker.getYear(), getMonthOfYear() 등을 활용
+
         dPicker.setOnDateChangedListener(new DatePicker.OnDateChangedListener() {
             @Override
             public void onDateChanged(DatePicker view,
                                       int year,
                                       int monthOfYear,
                                       int dayOfMonth) {
-                Year = year;
-                Month = monthOfYear + 1;
-                Day = dayOfMonth;
                 Log.d("날짜",
                         year + "년/" + (monthOfYear + 1) + "월/" + dayOfMonth + "일");
             }
@@ -58,15 +58,31 @@ public class MainActivity extends AppCompatActivity {
         tPicker.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
             @Override
             public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
-                CheckInHour = hourOfDay;
-                CheckInMinute = minute;
+
             }
         });
+
 
         ChInBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ChInT.setText(Year + "년/" + Month + "월/" + Day + "일/" + CheckInHour + "시:" + CheckInMinute + "분");
+
+                long now = System.currentTimeMillis();
+                Date date = new Date(now);
+
+                dPicker.updateDate((date.getYear()+1900),
+                                    (date.getMonth()),
+                                    date.getDate());
+                tPicker.setHour(date.getHours());
+                tPicker.setMinute(date.getMinutes());
+
+                int year = dPicker.getYear();
+                int month = (dPicker.getMonth() + 1);
+                int day = dPicker.getDayOfMonth();
+                int hour = tPicker.getHour();
+                int min = tPicker.getMinute();
+
+                ChInT.setText(year + "년/" + month + "월/" + day + "일/" + hour + "시:" + min + "분");
                 ChOutBtn.setEnabled(true);
                 ChInBtn.setEnabled(false);
             }
@@ -83,7 +99,23 @@ public class MainActivity extends AppCompatActivity {
         ChOutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ChOutT.setText(Year + "년/" + Month + "월/" + Day + "일" + CheckOutHour + "시:" + CheckOutMinute + "분");
+
+                long now = System.currentTimeMillis();
+                Date date = new Date(now);
+
+                dPicker.updateDate((date.getYear()+1900),
+                        (date.getMonth()),
+                        date.getDate());
+                tPicker.setHour(date.getHours());
+                tPicker.setMinute(date.getMinutes());
+
+                int year = dPicker.getYear();
+                int month = (dPicker.getMonth() + 1);
+                int day = dPicker.getDayOfMonth();
+                int hour = tPicker.getHour();
+                int min = tPicker.getMinute();
+
+                ChOutT.setText(year + "년/" + month + "월/" + day + "일/" + hour + "시:" + min + "분");
                 ChOutBtn.setEnabled(false);
             }
         }); // 체크아웃 버틀 눌렀을때
