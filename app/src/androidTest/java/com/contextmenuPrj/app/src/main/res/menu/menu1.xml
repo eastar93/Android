@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ChangeBackRed"
+        android:title="빨간색으로 배경 변경"/>
+    <item
+        android:id="@+id/ChangeBackYellow"
+        android:title="노란색으로 배경 변경"/>
+    <item
+        android:id="@+id/ChangeBackGreen"
+        android:title="초록색으로 배경 변경"/>
+    <item
+        android:id="@+id/ChangeBackBlue"
+        android:title="파란색으로 배경 변경"/>
+    <item
+        android:id="@+id/ChangeBackMagenta"
+        android:title="마젠타색으로 배경 변경"/>
+
+
+</menu>

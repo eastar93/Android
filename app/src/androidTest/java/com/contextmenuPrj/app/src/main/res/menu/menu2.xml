@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/rotate30Fr"
+        android:title="시계 30도 회전"/>
+
+    <item
+        android:id="@+id/rotate30Br"
+        android:title="반시계 30도 회전"/>
+    <item
+        android:id="@+id/rotate45Fr"
+        android:title="시계 45도 회전"/>
+
+    <item
+        android:id="@+id/rotate45Br"
+        android:title="반시계 45도 회전"/>
+    <item
+        android:id="@+id/rotate60Fr"
+        android:title="시계 60도 회전"/>
+
+    <item
+        android:id="@+id/rotate60Br"
+        android:title="반시계 60도 회전"/>
+    <item
+        android:id="@+id/rotate90Fr"
+        android:title="시계 90도 회전"/>
+
+    <item
+        android:id="@+id/rotate90Br"
+        android:title="반시계 90도 회전"/>
+
+        <item
+        android:id="@+id/SizeUp"
+        android:title="버튼 크기 키우기"/>
+
+    <item
+        android:id="@+id/Restoration"
+        android:title="원래대로 돌리기"/>
+
+</menu>

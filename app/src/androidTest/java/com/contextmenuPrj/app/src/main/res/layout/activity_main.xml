@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/BgL"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Button
+        android:id="@+id/ChangeBC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="배경색 바꾸기"/>
+
+    <Button
+        android:id="@+id/ChangeSB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼 상태 바꾸기"/>
+
+
+</LinearLayout>
+
+

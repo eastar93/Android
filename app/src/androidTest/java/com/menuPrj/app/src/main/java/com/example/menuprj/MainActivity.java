@@ -70,6 +70,13 @@ public class MainActivity extends AppCompatActivity {
         if(item.getItemId() == 2131230810) {
             OutLiLayout.setBackgroundColor(Color.MAGENTA);
         }
+        if(item.getItemId() == 2131231058) {
+            NBtn.setRotation(45);
+        }
+        if(item.getItemId() == 2131231176) {
+            NBtn.setScaleX(2);
+            NBtn.setScaleY(2);
+        }
 
         return true;
     }
