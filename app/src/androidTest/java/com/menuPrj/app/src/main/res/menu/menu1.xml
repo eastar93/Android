@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/backRed"
+        android:title="빨간 배경">
+    </item>
+    <item
+        android:id="@+id/backYellow"
+        android:title="노란 배경">
+    </item>
+    <item
+        android:id="@+id/backGreen"
+        android:title="녹색 배경">
+    </item>
+    <item
+        android:id="@+id/backBlue"
+        android:title="파란 배경">
+    </item>
+    <item
+        android:id="@+id/backPurple"
+        android:title="마젠타 배경">
+    </item>
+
+    <item android:title="추가옵션">
+        <menu>
+            <item
+                android:id="@+id/rotate"
+                android:title="버튼 45도 회전">
+            </item>
+            <item
+                android:id="@+id/upSize"
+                android:title="Size 2배">
+            </item>
+
+        </menu>
+    </item>
+</menu>
