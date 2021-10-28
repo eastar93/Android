@@ -122,8 +122,7 @@ public class MainActivity extends AppCompatActivity {
             ChangeSB.setScaleX(1);
             ChangeSB.setScaleY(1);
         }
-
-
+        
         return true;
 
     }
