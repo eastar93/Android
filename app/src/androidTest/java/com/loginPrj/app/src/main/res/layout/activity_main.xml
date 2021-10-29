@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <EditText
+        android:id="@+id/InsertID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID를 넣으세요"/>
+
+    <EditText
+        android:id="@+id/InsertPW"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="PW를 넣으세요"/>
+
+    <Button
+        android:id="@+id/Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로그인"/>
+
+</LinearLayout>
