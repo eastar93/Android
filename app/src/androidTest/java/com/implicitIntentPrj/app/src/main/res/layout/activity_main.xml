@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <Button
+        android:id="@+id/CallBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="전화걸기"/>
+
+    <Button
+        android:id="@+id/WebBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="웹사이트"/>
+
+    <Button
+        android:id="@+id/GoogleBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="구글열기"/>
+
+    <Button
+        android:id="@+id/SearchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="구글검색"/>
+
+    <Button
+        android:id="@+id/smsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="문자전송"/>
+
+    <Button
+        android:id="@+id/PhotoBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="사진찍기"/>
+
+
+
+</LinearLayout>

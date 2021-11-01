@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <EditText
+        android:id="@+id/NumEd1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Please Insert Num"/>
+
+    <EditText
+        android:id="@+id/NumEd2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Please Insert Num"/>
+
+    <Button
+        android:id="@+id/SubmitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"/>
+
+
+</LinearLayout>
