@@ -7,6 +7,13 @@
     xmlns:tool="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
+    <Button
+        android:id="@+id/asyncBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="비동기 요청"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
